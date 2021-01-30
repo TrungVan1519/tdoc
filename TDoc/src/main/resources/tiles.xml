@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+ 
+   <!-- Base View Definition -->
+   <definition name="baseView.definition" 
+       template="/WEB-INF/base-view/base.jsp"> 
+       <put-attribute name="title" 	value="Default title" />  
+       <put-attribute name="header" value="/WEB-INF/base-view/header.jsp" />  
+       <put-attribute name="menu" 	value="/WEB-INF/base-view/menu.jsp" />  
+       <put-attribute name="body" 	value="" />  
+       <put-attribute name="footer" value="/WEB-INF/base-view/footer.jsp" />  
+   </definition>  
+ 
+   <!-- Custom View Definition -->	
+   <!-- Java Core View -->
+   <definition name="javaCoreView.datatype.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Java Core" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/java/java-core/datatype.jsp" />  
+   </definition>  
+   
+   <!-- Spring MVC View -->
+   <definition name="springMVCView.concept.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/concept.jsp" />  
+   </definition>  
+   
+   <definition name="springMVCView.creatingProject.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/creating-project.jsp" />  
+   </definition>  
+   
+   <definition name="springMVCView.projectStructure.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/project-structure.jsp" />  
+   </definition>  
+   
+   <definition name="springMVCView.threeLayerStructure.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/three-layer-structure.jsp" />  
+   </definition>  
+   
+   <definition name="springMVCView.aboutController.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/about-controller.jsp" />  
+   </definition>   
+   
+   <definition name="springMVCView.aboutView.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/about-view.jsp" />  
+   </definition>   
+   
+   <definition name="springMVCView.readingFormData.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/reading-form-data.jsp" />  
+   </definition>   
+   
+   <definition name="springMVCView.annotation.definition" extends="baseView.definition">  
+       <put-attribute name="title" 	value="Spring MVC" />  
+       <put-attribute name="body" 	value="/WEB-INF/custom-view/spring/spring-mvc/annotation.jsp" />  
+   </definition>  
+</tiles-definitions>

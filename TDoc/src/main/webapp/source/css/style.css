@@ -1,0 +1,398 @@
+/*
+    Default: Theme
+    Fonts: Raleway & Open Sans
+    Colors:
+        Moon Yellow:    #f4c613
+        Grey:           #f212226
+        White smoke:    #f4f4f4
+        White:          #fff
+        Black:          #000
+        Blue:			#007BFF
+*/
+
+/* =================================== 
+               Vetical Menu
+   =================================== */
+.vertical-menu {
+	width: full-width;
+}
+
+.vertical-menu a {
+	background-color: #eee;
+	color: #000;
+	display: block;
+	text-decoration: none;
+}
+
+.vertical-menu a:hover {
+	background-color: #007BFF;
+	color: #fff;
+}
+
+.vertical-menu a.active {
+	background-color: #272723;
+	color: #fff;
+}
+
+/* =================================== 
+              Fixed Sidebar
+   =================================== */
+/* The sidebar menu */
+.sidenav {
+	height: full-height;
+	/* Full-height: remove this if you want "auto" height */
+	width: full-width; /* Set the width of the sidebar */
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: #eee;
+	overflow-x: auto; /* Enable horizontal scroll */
+	padding-top: 70px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 5px 10px 5px 15px;
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+	color: #fff;
+}
+
+.itemnav:hover{
+	background-color: #f4c613;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+/* =================================== 
+              Fixed Footer
+   =================================== */
+.fixed-footer {
+	background: #E0E0E0;
+	text-align: center;
+	padding-bottom: 1px;
+	margin-top: 10px;
+	color: #000;
+	display: block;
+}
+
+h5, h6{
+	color: red;
+}
+
+/*	==> index.jsp	*/
+/* =================================== 
+               html, body
+   =================================== */
+html, body {
+	Lam the html va body full page
+	height: 100%;
+}
+
+body {
+	color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	Su dung font chu cua website ggfont
+	font-family: "Raleway", sans-serif;
+}
+
+p {
+	Su dung font chu cua website ggfont
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	Dieu chinh do dam cua chu (lam chu thanh kieu bold)
+	font-weight: 400;
+	Dieu chinh chieu cao cua dong chu (tuong duong dieu chinh co chu)
+	line-height: 24px;
+}
+
+section {
+	background: white;
+	overflow: hidden;
+}
+
+=================================== 
+               Preloader
+   ===================================
+#preloader {
+	background-color: white;
+	Lam div preloader che full page
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	Lam div preloader o tren tat ca cac div
+	position: fixed;
+	z-index: 99999;
+}
+
+#status {
+	Lam div status co background la anh loading
+	background-image: url("../img/preloader/Pacman-1s-40px.gif");
+	background-repeat: no-repeat;
+	Lam div status thuoc div preloader
+	position: absolute;
+	Chinh chieu cao do rong div
+	width: 70px;
+	height: 70px;
+	Dieu chinh div status nam chinh giua div preloader
+	top: 50%;
+	left: 50%;
+	margin-left: -35px; Doan nay lay width/2 = 70px/2 == 35
+	margin-top: -35px; Doan nay lay height/2 = 70px/2 == 35
+}
+
+=================================== 
+                Home section 
+   ===================================
+#home {
+	Boi o tren ta set cho section noi chung deu co background: gray
+        nen vi the ta phai set cho section home background: none de khong bi mat video
+	background: none;
+	height: 100%;
+}
+
+#home-bg-video {
+	position: fixed;
+	Dieu chinh video nam chinh giua Home section
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	Lam video full Home section
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	Dam bao video luon o duoi cung trong Home section
+	z-index: -1;
+	Du phong neu nhu ca anh va video ben file html khong the load dc thi su dung cai nay
+	background-image: url("../video/poster.jpg") no-repeat;
+	background-size: cover;
+}
+
+#home-overlay {
+	Tao hieu ung phu mau den trong suot va che len video
+	background-color: rgba(0, 0, 0, 0.8);
+	Cho div overlay full toan bo Home section boi video full Home section
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+ Technique: css table method
+#home-content {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+#home-content-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+ End
+
+ Chi co tac dung vs h1 trong div home-heading   
+#home-heading h1 {
+	color: white;
+	font-size: 65px;
+	font-weight: 100;
+	text-transform: uppercase;
+	margin: 0;
+	display: block;
+}
+
+#home-heading h1 span {
+	color: #f4c613;
+	font-weight: 500;
+}
+
+#home-text p {
+	font-size: 17px;
+	font-weight: 100;
+	margin: 8px 0 30px 0;
+}
+
+ Button 
+.btn-custom-general {
+	font-family: "Raleway", sans-serif;
+	Dungdebogocduongviencuabutton
+	border-radius: 24px;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	-ms-border-radius: 24px;
+	-o-border-radius: 24px;
+	font-size: 13px;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin: 0 6px;
+	padding: 12px 46px 12px 46px;
+	Co ta dung lam cac thuoc tinh chuyen dong trong 0.5s
+	transition: all;
+	-webkit-transition: all .5s;
+	-moz-transition: all;
+	-ms-transition: all;
+	-o-transition: all;
+}
+
+.btn-custom-home {
+	color: white;
+	border: 1px solid white;
+}
+
+.btn-custom-home:hover {
+	color: blue;
+	background: #f4c613;
+	border-color: #f4c613;
+}
+
+.btn-custom-home:active {
+	color: #f4c613;
+	background: blue;
+	border: blue;
+}
+
+ Arrow down 
+#arrow-down {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	color: white;
+	font-size: 32px;
+	margin-left: -16px;
+	z-index: 1;
+}
+
+#arrow-down:hover {
+	color: #f4c613;
+}
+
+=================================== 
+               Content box
+   ===================================
+.content-box-lg {
+	padding: 120px 0;
+}
+
+.content-box-md {
+	padding: 100px 0;
+}
+
+=================================== 
+               Vetical heading
+   ===================================
+.vertical-heading h5 {
+	color: #f4c613;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	word-spacing: 5px;
+	display: inline-block;
+	Chuyen vi tri xuong dong duoi
+	position: relative;
+	top: 60px;
+	left: -63px;
+	Sau do moi xoay nguoc 90 do
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+}
+
+.vertical-heading h2 {
+	margin: 0 0 0 20px;
+	font-size: 42px;
+	line-height: 42px;
+}
+
+=================================== 
+               About part 1
+   ===================================
+Vs cach su dung selector kieu nay ta se khong phai khai bao class or id cho p
+#about-right p:first-child {
+	margin-bottom: 20px;
+}
+
+#about-bottom {
+	margin-top: 60px;
+}
+
+#about-bottom img {
+	Technique: Dam bao lam cho 1 element (o day la img) luon o trung tam cua page
+	margin: 0 auto;
+}
+
+=================================== 
+               About part 2
+   ===================================
+#about-2 {
+	background: gray;
+}
+
+.about-item {
+	background: white;
+	padding: 80px 30px;
+	Tao bong cho element
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.about-item i {
+	font-size: 42px;
+	margin: 0;
+}
+
+.about-item h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.about-item hr {
+	width: 90px;
+	height: 3px;
+	background-color: #f4c613;
+	margin: 0 auto;
+	border: none;
+}
+
+.about-item p {
+	margin-top: 20px;
+}
+
+ Hover state    
+.about-item:hover {
+	background-color: #f4c613;
+	Co tac dung lam hieu ung tro nen muot ma hon
+	transition: all 500ms ease-in-out;
+}
+
+.about-item:hover i, .about-item:hover h3, .about-item:hover p {
+	color: white;
+	Co tac dung lam hieu ung tro nen muot ma hon
+	transition: all 500ms ease-in-out;
+}
+
+.about-item:hover i {
+	Co tac dung thay doi toa do cua element
+	transform: translateY(-20px);
+}
+
+.about-item:hover hr {
+	background-color: white;
+}
